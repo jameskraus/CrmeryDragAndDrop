@@ -2,6 +2,7 @@
 
 A simple script to accept dropped files on a Crmery page and upload them.
 
+[![Build Status](https://travis-ci.org/jameskraus/CrmeryDragAndDrop.svg?branch=master)](https://travis-ci.org/jameskraus/CrmeryDragAndDrop)
 ## Installation
 
 Run `yarn install`
