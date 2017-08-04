@@ -42,7 +42,8 @@
     "lint": "eslint ./src/",
     "lint:fix": "eslint ./src/ --fix",
     "p": "prettier --write --no-semi --single-quote --trailing-comma es5 \"src/**/*.js\"",
-    "check-commit": "yarn test && yarn flow && yarn lint:fix && yarn p"
+    "check-commit": "yarn test && yarn flow && yarn lint:fix && yarn p",
+    "ci": "yarn test -- --coverage && yarn flow && yarn lint && yarn p"
   },
   "jest": {
     "collectCoverageFrom": [
