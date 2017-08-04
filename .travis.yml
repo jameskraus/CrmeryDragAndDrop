@@ -1,9 +1,16 @@
 language: node_js
 node_js:
-  - "7"
-  - "6"
+- '7'
+- '6'
 cache: yarn
 script:
-    - yarn ci
+- yarn ci
 after_script:
-    - yarn send-coverage
+- yarn send-coverage
+deploy:
+  provider: releases
+  api_key:
+    secure: HZzzeBYU+/RZlwIETMQAf080TqWuSqC55/C5Fv/AwNkBJlTFhx76F2r44HsTYZRAHo3Re4dGb9L4dtLmADcvs5XTuqiQr0i9AkHvMhEIMZoK712cPwcGBQqmFEpwDprvV90A8NcONN9q/PKD6mAGXjTh/5C5iWiOMAA0k9raTx3rLkIMb2n/5vHUnNjGY09QLu9TkiikR0qKfPvTu0qbxUdrreSJZll+gjaYWj9SMOarPI9qg6FbbDOvrfd7u/T+huEsJkWkRmI6UJGsDkojvmEoeForQNrRWtzQlQw3aHyqhyUxYRzewbFGUxswJUNQg7mQmlwJQCKmOk5zOo2Xh923E9CyqnPKD6MxBXnSP7KjJe+Gx4ETcrOzDw2YyJTmyzgT599v9Eo1iBerM5hiNijm27KvUdU/UuWg66AJCagw2FvpVM8WHJvTE2VCz3hJCUijAZ9i7PT51Ixu+CyukH5yyda2VTEF7fgMgF+KzCPO1MdVXlucgn7m2NIVsRk9LuDdCT6Cv/vxuHJCAoMvUjPzRi92CM/i5cd+sZ6Lcd6GutdsTlsu+PYpSyBn3oI619xzH1SJ6C6dAP7RXTbvKcVOXQs8xlj3QaT23U8RBpzQmuBgRZtKzl0QnJsFlcKKRIdmlEpvrxOz0Vqc5nmbO+0xT7wagaJf/yIWEQ6Tz3E=
+  file: build/js/bundle.js
+  on:
+    repo: jameskraus/CrmeryDragAndDrop
