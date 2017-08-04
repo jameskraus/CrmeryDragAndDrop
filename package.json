@@ -2,7 +2,7 @@
   "name": "CrmeryDragAndDrop",
   "version": "1.0.0",
   "description": "Drag and Drop file upload for Crmery",
-  "main": "index.js",
+  "main": "src/js/index.js",
   "author": "James Kraus",
   "license": "MIT",
   "dependencies": {
