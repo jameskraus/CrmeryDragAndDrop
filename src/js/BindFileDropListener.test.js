@@ -1,7 +1,7 @@
 // @flow
 /*global it expect jest*/
 
-import BindFileDropListener, { swallowEvent } from './BindFileDropListener'
+import BindFileDropListener, { addCopyEffect } from './BindFileDropListener'
 
 it('Should bind the listener on drop events', () => {
   const div = document.createElement('div')
@@ -18,15 +18,29 @@ it('Should bind the listener on drop events', () => {
 })
 
 it('Should swallow events', () => {
-  const myEvent = new class extends Event {
+  const myEvent: any = new class extends Event {
     constructor(name) {
       super(name)
     }
     preventDefault = jest.fn()
     stopPropagation = jest.fn()
   }('swallow_me')
-  swallowEvent(myEvent)
+  addCopyEffect(myEvent)
 
   expect(myEvent.preventDefault).toHaveBeenCalledTimes(1)
   expect(myEvent.stopPropagation).toHaveBeenCalledTimes(1)
+})
+
+it('Should add the copy effect to data transfers', () => {
+  const myEvent: any = new class extends Event {
+    constructor(name) {
+      super(name)
+    }
+    preventDefault = jest.fn()
+    stopPropagation = jest.fn()
+    dataTransfer = {}
+  }('swallow_me')
+  addCopyEffect(myEvent)
+
+  expect(myEvent.dataTransfer.dropEffect).toBe('copy')
 })
