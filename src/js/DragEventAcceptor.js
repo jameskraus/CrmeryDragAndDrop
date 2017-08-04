@@ -9,6 +9,14 @@ const DragEventAcceptor = <T>(f: FileList => T) => (e: DragEvent): void | T => {
   }
 
   e.preventDefault()
+  e.stopPropagation()
+
+  try {
+    dataTransfer.dropEffect = 'copy'
+  } catch (err) {
+    // toss out any errors
+  }
+
   const files = dataTransfer.files
   if (!files || files.length < 1) {
     // No items in dataTransfer
