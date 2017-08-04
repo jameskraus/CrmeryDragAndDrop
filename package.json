@@ -5,6 +5,9 @@
   "main": "src/js/index.js",
   "author": "James Kraus",
   "license": "MIT",
+  "dependencies": {
+    "whatwg-fetch": "^2.0.3"
+  },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
@@ -26,8 +29,7 @@
     "jest": "^20.0.4",
     "prettier": "^1.5.3",
     "regenerator-runtime": "^0.10.5",
-    "webpack": "^3.4.1",
-    "whatwg-fetch": "^2.0.3"
+    "webpack": "^3.4.1"
   },
   "scripts": {
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
