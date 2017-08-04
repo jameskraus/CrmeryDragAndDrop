@@ -5,3 +5,5 @@ node_js:
 cache: yarn
 script:
     - yarn ci
+after_script:
+    - yarn send-coverage

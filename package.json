@@ -25,6 +25,7 @@
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.1",
+    "coveralls": "^2.13.1",
     "eslint": "^4.3.0",
     "eslint-plugin-flowtype": "2.34.0",
     "eslint-plugin-import": "^2.7.0",
@@ -44,7 +45,8 @@
     "p": "prettier --write --no-semi --single-quote --trailing-comma es5 \"src/**/*.js\"",
     "p:nowrite": "prettier --no-semi --single-quote --trailing-comma es5 \"src/**/*.js\"",
     "check-commit": "yarn test && yarn flow && yarn lint:fix && yarn p",
-    "ci": "yarn test -- --coverage && yarn flow && yarn lint && yarn p:nowrite"
+    "ci": "yarn test -- --coverage && yarn flow && yarn lint && yarn p:nowrite",
+    "send-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js 2>/dev/null"
   },
   "jest": {
     "collectCoverageFrom": [
