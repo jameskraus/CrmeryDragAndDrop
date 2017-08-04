@@ -3,7 +3,7 @@
 
 // Because Crmery only responds with a script to execute upon completion, we're
 // going to just get the pertinent info from that response and then we'll
-// call the function outselves. This way we don't have to try and execute
+// call the function ourselves. This way we don't have to try and execute
 // the script by appending it to the document or something like that.
 
 const successRegex = /<script type="text\/javascript">window\.top\.window\.uploadSuccess\((\d+)\);<\/script>/
