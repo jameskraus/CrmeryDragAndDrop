@@ -1,6 +1,6 @@
 {
   "name": "CrmeryDragAndDrop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Drag and Drop file upload for Crmery",
   "main": "src/js/index.js",
   "author": "James Kraus",
@@ -39,7 +39,7 @@
     "p": "prettier --write --no-semi --single-quote --trailing-comma es5 \"src/**/*.js\"",
     "p:nowrite": "prettier --no-semi --single-quote --trailing-comma es5 \"src/**/*.js\"",
     "check-commit": "yarn test && yarn flow && yarn lint:fix && yarn p && yarn webpack",
-    "ci": "yarn test -- --coverage && yarn flow && yarn lint && yarn p:nowrite -- --list-different && yarn webpack",
+    "ci": "yarn test -- --coverage && yarn flow && yarn lint && yarn p:nowrite -- --list-different && yarn webpack -- -p",
     "send-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js 2>/dev/null"
   },
   "jest": {
