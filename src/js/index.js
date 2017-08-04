@@ -8,7 +8,7 @@ import SendFiles from './SendFiles'
 import DragEventAcceptor from './DragEventAcceptor'
 import BindFileDropListener from './BindFileDropListener'
 
-// Get unknown stuff from window/document
+// Get uncertain stuff from window/document
 const body = document.body
 if (!body) throw new Error('Body not found')
 const { id, type } = GetIdAndType(window)
