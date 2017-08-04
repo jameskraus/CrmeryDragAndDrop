@@ -36,8 +36,8 @@
     "lint:fix": "eslint ./src/ --fix",
     "p": "prettier --write --no-semi --single-quote --trailing-comma es5 \"src/**/*.js\"",
     "p:nowrite": "prettier --no-semi --single-quote --trailing-comma es5 \"src/**/*.js\"",
-    "check-commit": "yarn test && yarn flow && yarn lint:fix && yarn p",
-    "ci": "yarn test -- --coverage && yarn flow && yarn lint && yarn p:nowrite",
+    "check-commit": "yarn test && yarn flow && yarn lint:fix && yarn p && yarn webpack",
+    "ci": "yarn test -- --coverage && yarn flow && yarn lint && yarn p:nowrite && yarn webpack",
     "send-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js 2>/dev/null"
   },
   "jest": {
