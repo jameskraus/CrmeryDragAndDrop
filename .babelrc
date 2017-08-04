@@ -1,0 +1,30 @@
+{
+  "plugins": [
+    "flow-react-proptypes",
+    "transform-class-properties",
+    "transform-flow-strip-types"
+  ],
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["last 2 versions"]
+      }
+    }],
+    ["stage-2"],
+    ["react"]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-class-properties",
+        ["transform-runtime", {
+            "regenerator": true
+        }]
+      ],
+      "presets": [
+        ["es2015"]
+      ]
+    }
+  }
+}

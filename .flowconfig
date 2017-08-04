@@ -1,0 +1,15 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/styled-components/.*.test.js
+<PROJECT_ROOT>/node_modules/styled-components/src/native/.*
+<PROJECT_ROOT>/node_modules/styled-components/src/primitives/.*
+
+[include]
+
+[libs]
+
+[options]
+unsafe.enable_getters_and_setters=true
+suppress_comment=.*\\$FlowFixMe
+suppress_comment=.*\\$FlowInvalidInputTest
+
+[lints]
