@@ -1,7 +1,7 @@
 // @flow
 /*global it expect jest*/
 
-import BindFileDropListener from './BindFileDropListener'
+import BindFileDropListener, { swallowEvent } from './BindFileDropListener'
 
 it('Should bind the listener on drop events', () => {
   const div = document.createElement('div')
@@ -15,4 +15,18 @@ it('Should bind the listener on drop events', () => {
   div.dispatchEvent(dropEvent)
 
   expect(listener).toHaveBeenCalledTimes(1)
+})
+
+it('Should swallow events', () => {
+  const myEvent = new class extends Event {
+    constructor(name) {
+      super(name)
+    }
+    preventDefault = jest.fn()
+    stopPropagation = jest.fn()
+  }('swallow_me')
+  swallowEvent(myEvent)
+
+  expect(myEvent.preventDefault).toHaveBeenCalledTimes(1)
+  expect(myEvent.stopPropagation).toHaveBeenCalledTimes(1)
 })

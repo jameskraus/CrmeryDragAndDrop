@@ -1,7 +1,7 @@
 // @flow
 
 // Required or the drop event never makes it to our drop event handler
-const swallowEvent = (e: Event) => {
+export const swallowEvent = (e: Event) => {
   e.preventDefault()
   e.stopPropagation()
 }
