@@ -14,8 +14,12 @@ Run `yarn run webpack`
 
 To use the generated bundle.js, you must include it at the bottom of the page.
 If you want to include it at the top of the page, you'll have to customize it to
-run after the document is loaded. Personally, I just added the script to the
-bottom of the `companies/tmpl/company.php` and `people/tmpl/person.html`.
+run after the document is loaded. Personally, I just added this script to the
+bottom of the `companies/tmpl/company.php` and `people/tmpl/person.php`:
+```
+<!-- Drag and Drop Script -->
+<script src="/components/com_crmery/media/js/drag-and-drop.js" async defer type="text/javascript"></script>
+```
 
 ## Testing
 
