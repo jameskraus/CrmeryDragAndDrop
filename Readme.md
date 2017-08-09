@@ -3,6 +3,7 @@
 A simple script to accept dropped files on a Crmery page and upload them.
 
 [![Build Status](https://travis-ci.org/jameskraus/CrmeryDragAndDrop.svg?branch=master)](https://travis-ci.org/jameskraus/CrmeryDragAndDrop) [![Coverage Status](https://coveralls.io/repos/github/jameskraus/CrmeryDragAndDrop/badge.svg?branch=master)](https://coveralls.io/github/jameskraus/CrmeryDragAndDrop?branch=master)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fjameskraus%2FCrmeryDragAndDrop.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fjameskraus%2FCrmeryDragAndDrop?ref=badge_shield)
 
 ## Preview
 
