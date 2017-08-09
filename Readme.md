@@ -7,6 +7,7 @@ A simple script to accept dropped files on a Crmery page and upload them.
 ## Preview
 
 ![Example of Dragging and Dropping](https://raw.githubusercontent.com/jameskraus/CrmeryDragAndDrop/example-gif/example.gif)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fjameskraus%2FCrmeryDragAndDrop.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fjameskraus%2FCrmeryDragAndDrop?ref=badge_shield)
 
 ## Installation
 
@@ -39,3 +40,6 @@ prettier.
 ## License
 
 MIT Licensed. Enjoy.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fjameskraus%2FCrmeryDragAndDrop.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fjameskraus%2FCrmeryDragAndDrop?ref=badge_large)
